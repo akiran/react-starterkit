@@ -19,7 +19,10 @@ module.exports = {
   module: {
     loaders: [{
       test: /\.js$/,
-      loaders: ['babel'],
+      loader: 'babel',
+      query: {
+        presets: ['react-hmre'],
+      },
       include: path.join(__dirname, 'src')
     }]
   },
